@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: agri-decision-support-dt
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
